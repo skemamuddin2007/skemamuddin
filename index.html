@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SK Emam Uddin — Curious, Growth, Seeker</title>
+<meta name="description" content="SK Emam Uddin — student from Cumilla, Bangladesh exploring AI, robotics, automation, 3D design and digital marketing. Taekwondo assistant coach. Portfolio, certifications and contact links.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="SK Emam Uddin — Curious, Growth, Seeker">
+<meta property="og:description" content="Student from Cumilla, Bangladesh exploring AI, robotics, automation and design. Taekwondo assistant coach since 2020.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "SK Emam Uddin",
+  "url": "https://sites.google.com/view/skemamuddin/home",
+  "email": "mailto:skemamuddin2004@gmail.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "Cumilla", "addressCountry": "BD" },
+  "sameAs": [
+    "https://www.linkedin.com/in/skemamuddin/",
+    "https://github.com/skemamuddin2007",
+    "https://www.behance.net/skemamuddin1",
+    "https://www.youtube.com/@skemamuddin2007"
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* ===== Tokens ===== */
+  :root{
+    --ink:#120f1a;
+    --ink-2:#1a1525;
+    --ink-3:#241d33;
+    --paper:#f4efe6;
+    --gold:#e2a857;
+    --jade:#4f9d85;
+    --crimson:#c2503a;
+    --blue:#4c7fd6;
+    --yellow:#e2c14d;
+    --muted:#a79fbd;
+    --line:rgba(244,239,230,0.12);
+    --display: 'Fraunces', serif;
+    --body: 'Plus Jakarta Sans', sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--ink);
+    color:var(--paper);
+    font-family:var(--body);
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  ::selection{background:var(--gold);color:var(--ink);}
+
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+
+  .wrap{max-width:1120px;margin:0 auto;padding:0 32px;}
+
+  h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-0.01em;}
+
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--gold);
+    display:flex;align-items:center;gap:10px;
+    margin-bottom:18px;
+  }
+  .eyebrow::before{content:'';width:22px;height:1px;background:var(--gold);}
+
+  /* ===== reveal ===== */
+  .reveal{
+    opacity:0;
+    transform:translateY(46px) rotateX(14deg);
+    transform-origin:top center;
+    transition:opacity .9s cubic-bezier(.22,.9,.27,1), transform .9s cubic-bezier(.22,.9,.27,1);
+    will-change:transform,opacity;
+  }
+  .reveal.in{opacity:1;transform:translateY(0) rotateX(0deg);}
+
+  /* scroll progress bar */
+  .scrollbar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--jade),var(--gold));z-index:200;width:0%;}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important;transition:none !important;}
+    .reveal{opacity:1;transform:none;}
+  }
+
+  /* ===== Nav ===== */
+  nav{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    backdrop-filter:blur(14px);
+    background:rgba(18,15,26,0.72);
+    border-bottom:1px solid var(--line);
+  }
+  .navrow{
+    max-width:1120px;margin:0 auto;padding:18px 32px;
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  .brand{font-family:var(--display);font-size:20px;font-weight:600;}
+  .brand em{color:var(--gold);font-style:normal;}
+  .navlinks{display:flex;gap:34px;font-size:14px;}
+  .navlinks a{position:relative;color:var(--muted);transition:color .25s;}
+  .navlinks a:hover{color:var(--paper);}
+  .navlinks a::after{
+    content:'';position:absolute;left:0;bottom:-6px;width:0;height:1px;
+    background:var(--gold);transition:width .3s ease;
+  }
+  .navlinks a:hover::after{width:100%;}
+  .navtoggle{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;}
+  .navtoggle span{width:22px;height:1.5px;background:var(--paper);}
+
+  @media (max-width:760px){
+    .navlinks{
+      position:fixed;top:64px;right:0;height:calc(100vh - 64px);width:240px;
+      background:var(--ink-2);flex-direction:column;padding:36px 28px;gap:24px;
+      transform:translateX(100%);transition:transform .35s ease;border-left:1px solid var(--line);
+    }
+    .navlinks.open{transform:translateX(0);}
+    .navtoggle{display:flex;}
+  }
+
+  /* ===== Hero ===== */
+  .hero{
+    min-height:100vh;
+    display:flex;align-items:center;
+    position:relative;
+    padding-top:90px;
+    overflow:hidden;
+  }
+  .hero-bg{
+    position:absolute;inset:0;z-index:0;pointer-events:none;
+  }
+  .blob{
+    position:absolute;border-radius:50%;filter:blur(60px);opacity:.35;
+    animation:pulseblob 9s ease-in-out infinite;
+  }
+  .blob.b1{width:420px;height:420px;background:var(--jade);top:-120px;right:-80px;animation-delay:0s;}
+  .blob.b2{width:340px;height:340px;background:var(--gold);bottom:-100px;right:280px;animation-delay:-3s;}
+  .blob.b3{width:260px;height:260px;background:var(--crimson);bottom:60px;left:-60px;opacity:.22;animation-delay:-1.5s;}
+  @keyframes pulseblob{
+    0%,100%{opacity:.28;filter:blur(60px);}
+    50%{opacity:.42;filter:blur(74px);}
+  }
+
+  .hero-grid{
+    display:grid;grid-template-columns:1.3fr 0.7fr;gap:64px;align-items:center;
+    position:relative;z-index:1;width:100%;
+  }
+  @media (max-width:860px){.hero-grid{grid-template-columns:1fr;}}
+
+  .hero h1{
+    font-size:clamp(48px,7vw,86px);
+    line-height:0.98;
+    margin-bottom:22px;
+  }
+  .hero h1 .line2{display:block;color:var(--gold);font-style:italic;font-weight:500;}
+
+  .tagline-pill{
+    display:inline-flex;gap:10px;align-items:center;
+    border:1px solid var(--line);border-radius:100px;
+    padding:8px 18px;font-family:var(--mono);font-size:13px;color:var(--muted);
+    margin-bottom:28px;
+  }
+  .tagline-pill .dot{width:6px;height:6px;border-radius:50%;background:var(--jade);animation:pulse 2s infinite;}
+  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.35;}}
+
+  .hero p.lead{
+    max-width:520px;color:var(--muted);font-size:17px;margin-bottom:36px;
+  }
+
+  .cta-row{display:flex;gap:16px;flex-wrap:wrap;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:14px 26px;border-radius:100px;font-size:14px;font-weight:600;
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .btn-solid{background:var(--gold);color:var(--ink);}
+  .btn-solid:hover{transform:translateY(-2px);box-shadow:0 12px 24px -10px rgba(226,168,87,0.5);}
+  .btn-ghost{border:1px solid var(--line);color:var(--paper);}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px);}
+
+  .hero-photo{
+    position:relative;
+    width:100%;max-width:300px;margin:0 auto;
+  }
+  .photo-frame{
+    aspect-ratio:1/1.05;border-radius:28px;
+    background:linear-gradient(160deg,var(--ink-3),var(--ink-2));
+    border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;
+    overflow:hidden;position:relative;
+  }
+  .photo-frame img{width:100%;height:100%;object-fit:cover;}
+  .photo-placeholder{
+    text-align:center;color:var(--muted);font-family:var(--mono);font-size:12px;padding:20px;
+  }
+  .photo-placeholder svg{width:64px;height:64px;margin-bottom:14px;opacity:.5;}
+  .photo-badge{
+    position:absolute;bottom:-16px;left:50%;transform:translateX(-50%);
+    background:var(--jade);color:var(--ink);font-family:var(--mono);font-size:11px;
+    padding:6px 16px;border-radius:100px;white-space:nowrap;letter-spacing:.05em;
+  }
+
+  .scroll-cue{
+    position:absolute;bottom:36px;left:32px;display:flex;align-items:center;gap:10px;
+    font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.1em;
+  }
+  .scroll-cue .line{width:1px;height:34px;background:linear-gradient(var(--gold),transparent);
+    animation:scrolldown 1.8s infinite;}
+  @keyframes scrolldown{0%{transform:scaleY(0);transform-origin:top;}50%{transform:scaleY(1);transform-origin:top;}100%{transform:scaleY(0);transform-origin:bottom;}}
+
+  /* ===== Section shared ===== */
+  section{padding:130px 0;position:relative;perspective:1200px;}
+  .hero{perspective:1200px;}
+  .section-head{max-width:640px;margin-bottom:64px;}
+  .section-head h2{font-size:clamp(32px,4vw,46px);}
+  .section-head p{color:var(--muted);margin-top:14px;font-size:16px;}
+
+  /* ===== About ===== */
+  #about{background:var(--ink-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;}
+  @media (max-width:780px){.about-grid{grid-template-columns:1fr;}}
+  .about-grid p{font-size:18px;color:#d9d4e6;margin-bottom:18px;}
+  .about-grid p strong{color:var(--paper);}
+  .fact-list{display:flex;flex-direction:column;gap:0;}
+  .fact{
+    display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--line);
+    font-size:14px;
+  }
+  .fact span:first-child{font-family:var(--mono);color:var(--muted);letter-spacing:.05em;text-transform:uppercase;font-size:11px;}
+  .fact span:last-child{text-align:right;max-width:260px;}
+  .lang-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px;}
+  .lang-chip{
+    font-family:var(--mono);font-size:11px;border:1px solid var(--line);border-radius:100px;
+    padding:6px 14px;color:var(--muted);
+  }
+  .lang-chip b{color:var(--paper);font-weight:500;}
+
+  /* ===== Journey / belt timeline ===== */
+  #journey .section-head p em{color:var(--muted);font-style:italic;}
+
+  .belt-track{
+    position:relative;margin-left:14px;padding-left:40px;
+    border-left:2px solid var(--line);
+  }
+  .belt-progress{
+    position:absolute;left:-2px;top:0;width:2px;height:0%;
+    background:linear-gradient(var(--jade),var(--gold));
+    transition:height .1s linear;
+  }
+  .belt-node{position:relative;padding-bottom:64px;}
+  .belt-node:last-child{padding-bottom:0;}
+  .belt-dot{
+    position:absolute;left:-51px;top:2px;width:20px;height:20px;border-radius:50%;
+    border:3px solid var(--ink);box-shadow:0 0 0 2px var(--line);
+  }
+  .belt-node .date{font-family:var(--mono);font-size:12px;color:var(--gold);letter-spacing:.08em;margin-bottom:6px;display:block;}
+  .belt-node h3{font-size:22px;margin-bottom:4px;}
+  .belt-node .org{color:var(--muted);font-size:14px;margin-bottom:10px;}
+  .belt-node p.detail{color:#cfc9de;font-size:15px;max-width:560px;}
+  .belt-node ul{margin-top:8px;padding-left:18px;color:#cfc9de;font-size:14.5px;}
+  .belt-node ul li{margin-bottom:4px;}
+
+  .belt-key{display:flex;gap:18px;flex-wrap:wrap;margin-top:50px;font-family:var(--mono);font-size:11.5px;color:var(--muted);}
+  .belt-key span{display:flex;align-items:center;gap:7px;}
+  .belt-key .sw{width:10px;height:10px;border-radius:50%;}
+
+  /* ===== Focus / Skills ===== */
+  #focus{background:var(--ink-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .focus-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden;}
+  @media (max-width:820px){.focus-grid{grid-template-columns:1fr;}}
+  .focus-col{background:var(--ink);padding:36px 32px;}
+  .focus-col h3{font-size:13px;font-family:var(--mono);letter-spacing:.1em;text-transform:uppercase;margin-bottom:22px;}
+  .focus-col.t1 h3{color:var(--jade);}
+  .focus-col.t2 h3{color:var(--gold);}
+  .focus-col.t3 h3{color:var(--crimson);}
+  .focus-col ul{list-style:none;display:flex;flex-direction:column;gap:14px;}
+  .focus-col li{font-size:16px;color:#e3deee;padding-left:18px;position:relative;}
+  .focus-col li::before{content:'';position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:var(--line);}
+  .focus-col.t1 li::before{background:var(--jade);}
+  .focus-col.t2 li::before{background:var(--gold);}
+  .focus-col.t3 li::before{background:var(--crimson);}
+
+  /* ===== Credentials ===== */
+  .cred-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;}
+  @media (max-width:780px){.cred-grid{grid-template-columns:1fr;}}
+  .cred-block h3{font-size:14px;font-family:var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;}
+  .cred-item{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);align-items:baseline;}
+  .cred-item .num{font-family:var(--mono);font-size:12px;color:var(--muted);}
+  .cred-item .txt{font-size:15.5px;color:#e3deee;}
+  .cred-item .sub{display:block;font-size:12.5px;color:var(--muted);margin-top:2px;}
+
+  /* ===== Projects ===== */
+  #projects{background:var(--ink-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .project-card{
+    display:grid;grid-template-columns:0.9fr 1.1fr;gap:0;
+    border:1px solid var(--line);border-radius:22px;overflow:hidden;
+    background:var(--ink);transition:transform .35s ease, box-shadow .35s ease;
+  }
+  .project-card:hover{transform:translateY(-4px);box-shadow:0 24px 50px -24px rgba(0,0,0,0.6);}
+  @media (max-width:780px){.project-card{grid-template-columns:1fr;}}
+  .project-visual{
+    background:
+      radial-gradient(circle at 30% 20%, rgba(226,168,87,.25), transparent 60%),
+      radial-gradient(circle at 80% 80%, rgba(79,157,133,.3), transparent 55%),
+      var(--ink-3);
+    min-height:240px;display:flex;align-items:center;justify-content:center;position:relative;
+  }
+  .project-visual .mono-tag{
+    font-family:var(--mono);font-size:48px;color:rgba(244,239,230,0.08);font-weight:700;letter-spacing:-2px;
+  }
+  .project-body{padding:40px;display:flex;flex-direction:column;gap:14px;}
+  .project-body .ptag{font-family:var(--mono);font-size:11px;color:var(--jade);letter-spacing:.1em;text-transform:uppercase;}
+  .project-body h3{font-size:26px;}
+  .project-body p{color:var(--muted);font-size:15px;}
+  .project-links{display:flex;gap:14px;margin-top:10px;}
+  .project-links a{font-size:14px;font-weight:600;display:flex;align-items:center;gap:6px;color:var(--gold);}
+  .project-links a:hover{text-decoration:underline;}
+
+  .more-projects{margin-top:28px;text-align:center;color:var(--muted);font-size:14px;}
+  .more-projects a{color:var(--gold);font-weight:600;}
+
+  /* ===== Connect ===== */
+  .connect-groups{display:flex;flex-direction:column;gap:48px;}
+  .connect-group h3{
+    font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--muted);margin-bottom:18px;
+  }
+  .pill-row{display:flex;flex-wrap:wrap;gap:12px;}
+  .pill{
+    border:1px solid var(--line);border-radius:100px;padding:11px 20px;font-size:14px;
+    display:inline-flex;align-items:center;gap:8px;transition:all .25s ease;
+  }
+  .pill:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px);}
+  .pill .arrow{font-size:12px;opacity:.6;}
+
+  .contact-strip{
+    margin-top:70px;border-top:1px solid var(--line);padding-top:40px;
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;
+  }
+  .contact-strip a{font-size:16px;}
+  .contact-strip .big-email{font-family:var(--display);font-style:italic;font-size:28px;color:var(--gold);}
+  .contact-strip .big-email:hover{text-decoration:underline;}
+
+  footer{padding:40px 0 60px;border-top:1px solid var(--line);}
+  .foot-row{display:flex;justify-content:space-between;color:var(--muted);font-size:13px;flex-wrap:wrap;gap:10px;}
+  .foot-row span b{color:var(--paper);}
+</style>
+</head>
+<body>
+<div class="scrollbar" id="scrollbar"></div>
+
+<nav>
+  <div class="navrow">
+    <a class="brand" href="#top">SK <em>Emam Uddin</em></a>
+    <button class="navtoggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <div class="navlinks" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#journey">Journey</a>
+      <a href="#focus">Focus</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#projects">Projects</a>
+      <a href="#connect">Connect</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<header class="hero" id="top">
+  <div class="hero-bg">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+  </div>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="tagline-pill"><span class="dot"></span> Open to AI, automation &amp; design work</div>
+      <h1>Curious.<span class="line2">Growth seeker.</span></h1>
+      <p class="lead">I'm SK Emam Uddin, a student from Cumilla, Bangladesh, with a restless appetite for AI, robotics, automation and design. No early-career polish yet — just steady, daily reps at getting better.</p>
+      <div class="cta-row">
+        <a class="btn btn-solid" href="#projects">See my work</a>
+        <a class="btn btn-ghost" href="#connect">Get in touch</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <div class="photo-frame">
+        <img src="SK Profile Pic.jpg" alt="SK Emam Uddin">
+        <!-- <div class="photo-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+          Drop your photo in here
+        </div> -->
+      </div>
+      <div class="photo-badge">Ranir Bazar, Cumilla</div>
+    </div>
+  </div>
+  <div class="scroll-cue"><span class="line"></span> SCROLL</div>
+</header>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="reveal">
+        <div class="eyebrow">About</div>
+        <p>Learning is a personal choice for me, not an assignment. I'm a <strong>passionate, self-taught explorer</strong> of artificial intelligence, computer vision, robotics and automation — and outside the screen, I've spent six years on the mat as a <strong>Taekwondo assistant coach</strong>, which taught me more about discipline and pacing than any course did.</p>
+        <p>I haven't worked a "real job" yet. What I do have is curiosity that doesn't run out, and a habit of finishing what I start. I want to become someone people can trust with hard problems — humble, independent, and reliably helpful.</p>
+      </div>
+      <div class="reveal">
+        <div class="fact-list">
+          <div class="fact"><span>Based in</span><span>Ranir Bazar, Cumilla, Bangladesh</span></div>
+          <div class="fact"><span>Currently</span><span>HSC student, Cumilla Residential College</span></div>
+          <div class="fact"><span>Coaching since</span><span>2020 — Cumilla Taekwondo Academy</span></div>
+          <div class="fact"><span>Focus areas</span><span>AI tools · Robotics · Automation · 3D Design · Graphics · Digital Marketing</span></div>
+          <div class="fact"><span>Email</span><span>skemamuddin2004@gmail.com</span></div>
+        </div>
+        <div class="lang-row">
+          <span class="lang-chip"><b>Bangla</b> — native</span>
+          <span class="lang-chip"><b>English</b> — professional</span>
+          <span class="lang-chip"><b>Hindi</b> — limited</span>
+          <span class="lang-chip"><b>Urdu</b> — elementary</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== JOURNEY ===== -->
+<section id="journey">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Journey</div>
+      <h2>The long way to here.</h2>
+      <p>Every stage below moved me one step further — the colors trace it the way a Taekwondo belt traces rank: <em>not a real grading, just a way of marking the climb.</em></p>
+    </div>
+
+    <div class="belt-track" id="beltTrack">
+      <div class="belt-progress" id="beltProgress"></div>      <div class="belt-node reveal">
+        <div class="belt-dot" style="background:#f4efe6;"></div>
+        <span class="date">2014 — 2019</span>
+        <h3>Comilla Modern School</h3>
+        <div class="org">Early years, Class 1–4</div>
+        <p class="detail">Where the questions started outnumbering the answers.</p>
+      </div>
+
+      <div class="belt-node reveal">
+        <div class="belt-dot" style="background:var(--yellow);"></div>
+        <span class="date">2017 — 2023</span>
+        <h3>Cumilla Zilla School</h3>
+        <div class="org">SSC, Science · GPA 4.92</div>
+        <p class="detail">Built the discipline of finishing things properly, not just on time.</p>
+      </div>
+
+      <div class="belt-node reveal">
+        <div class="belt-dot" style="background:var(--jade);"></div>
+        <span class="date">2020 — 2025</span>
+        <h3>Assistant Coach</h3>
+        <div class="org">Cumilla Taekwondo Academy</div>
+        <p class="detail">Five years on the mat, teaching what I was still learning myself.</p>
+        <ul>
+          <li>Coached 100+ students at Cumilla Taekwondo Academy</li>
+          <li>Coached 50+ students at Feni Govt. Girls High School</li>
+        </ul>
+      </div>
+
+      <div class="belt-node reveal">
+        <div class="belt-dot" style="background:var(--crimson);"></div>
+        <span class="date">2023 — 2025</span>
+        <h3>Cumilla Residential College</h3>
+        <div class="org">HSC, Science · GPA 3.72</div>
+        <p class="detail">Started splitting time between textbooks and side projects in AI and design.</p>
+      </div>
+
+      <div class="belt-node reveal">
+        <div class="belt-dot" style="background:var(--ink);box-shadow:0 0 0 2px var(--gold);"></div>
+        <span class="date">Now</span>
+        <h3>Still leveling up</h3>
+        <div class="org">No black belt here — just the next thing to learn</div>
+        <p class="detail">Currently deep in AI tools, automation and freelance design work. This page will keep changing as that does.</p>
+      </div>
+    </div>
+
+    <div class="belt-key">
+      <span><i class="sw" style="background:#f4efe6;"></i> Foundations</span>
+      <span><i class="sw" style="background:var(--yellow);"></i> Discipline</span>
+      <span><i class="sw" style="background:var(--jade);"></i> Teaching</span>
+      <span><i class="sw" style="background:var(--crimson);"></i> Building</span>
+      <span><i class="sw" style="background:var(--gold);"></i> Ongoing</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOCUS ===== -->
+<section id="focus">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Focus</div>
+      <h2>What I'm building skills in.</h2>
+    </div>
+    <div class="focus-grid">
+      <div class="focus-col t1 reveal">
+        <h3>Tech &amp; Build</h3>
+        <ul>
+          <li>AI tools &amp; workflows</li>
+          <li>Computer vision</li>
+          <li>Robotics</li>
+          <li>Automation</li>
+          <li>SolidWorks &amp; 3D design</li>
+        </ul>
+      </div>
+      <div class="focus-col t2 reveal">
+        <h3>Create</h3>
+        <ul>
+          <li>Graphics design</li>
+          <li>Digital marketing</li>
+          <li>Stock content &amp; photography</li>
+          <li>Visual storytelling</li>
+        </ul>
+      </div>
+      <div class="focus-col t3 reveal">
+        <h3>Discipline</h3>
+        <ul>
+          <li>Creative problem solving</li>
+          <li>Time &amp; deadline management</li>
+          <li>Coaching &amp; mentoring</li>
+          <li>Physical training</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CREDENTIALS ===== -->
+<section id="credentials">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Credentials</div>
+      <h2>Certifications &amp; recognition.</h2>
+    </div>
+    <div class="cred-grid">
+      <div class="cred-block reveal">
+        <h3>Certifications</h3>
+        <div class="cred-item"><span class="num">01</span><span class="txt">Generative AI Mastermind</span></div>
+        <div class="cred-item"><span class="num">02</span><span class="txt">Windows 10 System Administration &amp; Basic Computer Skills</span></div>
+        <div class="cred-item"><span class="num">03</span><span class="txt">Vibe Coding</span></div>
+        <div class="cred-item"><span class="num">04</span><span class="txt">Basic Computer Application</span></div>
+        <div class="cred-item"><span class="num">05</span><span class="txt">Graphics Design</span></div>
+        <div class="cred-item"><span class="num">06</span><span class="txt">Basic Driving Training (L.T.V.)</span></div>
+        <div class="cred-item"><span class="num">07</span><span class="txt">E‑Learning and Earning Ltd.</span></div>
+      </div>
+      <div class="cred-block reveal">
+        <h3>Honors &amp; Awards</h3>
+        <div class="cred-item"><span class="num">★</span><span class="txt">Shapla Cub Award</span></div>
+        <div class="cred-item"><span class="num">★</span><span class="txt">1st Taekwondo Coaches &amp; Referee Course, 2024</span></div>
+        <div class="cred-item"><span class="num">★</span><span class="txt">Bangabandhu 14th National ITF Taekwon‑Do Championship</span></div>
+        <div class="cred-item"><span class="num">★</span><span class="txt">Physics Olympiad</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Projects</div>
+      <h2>Things I've shipped.</h2>
+      <p>Edit the description below to say exactly what SK Nova Platform does — I've kept it general for now.</p>
+    </div>
+
+    <div class="project-card reveal">
+      <div class="project-visual"><span class="mono-tag">SK//N</span></div>
+      <div class="project-body">
+        <span class="ptag">Live project</span>
+        <h3>SK Nova Platform</h3>
+        <p>A web platform I designed and built — replace this line with a couple of sentences on what it does, who it's for, and what you used to build it (e.g. stack, tools, timeline).</p>
+        <div class="project-links">
+          <a href="https://sknovaplatform.netlify.app/" target="_blank" rel="noopener">Visit live site →</a>
+          <a href="https://github.com/skemamuddin2007" target="_blank" rel="noopener">Source on GitHub →</a>
+        </div>
+      </div>
+    </div>
+
+    <p class="more-projects">More builds going up here as they're finished — meanwhile, browse the rest on <a href="https://github.com/skemamuddin2007" target="_blank" rel="noopener">GitHub</a>.</p>
+  </div>
+</section>
+
+<!-- ===== CONNECT ===== -->
+<section id="connect">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Connect</div>
+      <h2>Find me elsewhere.</h2>
+      <p>Grouped by what you're looking for — social, creative work, or hiring.</p>
+    </div>
+
+    <div class="connect-groups">
+      <div class="connect-group reveal">
+        <h3>Social</h3>
+        <div class="pill-row">
+          <a class="pill" href="https://www.linkedin.com/in/skemamuddin/" target="_blank" rel="noopener">LinkedIn <span class="arrow">↗</span></a>
+          <a class="pill" href="https://github.com/skemamuddin2007" target="_blank" rel="noopener">GitHub <span class="arrow">↗</span></a>
+          <a class="pill" href="https://www.youtube.com/@skemamuddin2007" target="_blank" rel="noopener">YouTube <span class="arrow">↗</span></a>
+          <a class="pill" href="https://www.facebook.com/skemamuddin2007/" target="_blank" rel="noopener">Facebook <span class="arrow">↗</span></a>
+          <a class="pill" href="https://www.instagram.com/skemamuddin2007/" target="_blank" rel="noopener">Instagram <span class="arrow">↗</span></a>
+          <a class="pill" href="https://www.threads.com/@skemamuddin2007" target="_blank" rel="noopener">Threads <span class="arrow">↗</span></a>
+          <a class="pill" href="https://www.tiktok.com/@skemamuddin07" target="_blank" rel="noopener">TikTok <span class="arrow">↗</span></a>
+          <a class="pill" href="https://www.pinterest.com/skemamuddin2007/" target="_blank" rel="noopener">Pinterest <span class="arrow">↗</span></a>
+          <a class="pill" href="https://www.tumblr.com/blog/skemamuddin" target="_blank" rel="noopener">Tumblr <span class="arrow">↗</span></a>
+          <a class="pill" href="https://www.twitch.tv/skemamuddin" target="_blank" rel="noopener">Twitch <span class="arrow">↗</span></a>
+          <a class="pill" href="https://www.reddit.com/user/SKEMAM/" target="_blank" rel="noopener">Reddit <span class="arrow">↗</span></a>
+          <a class="pill" href="https://www.quora.com/profile/SK-EMAM-UDDIN" target="_blank" rel="noopener">Quora <span class="arrow">↗</span></a>
+        </div>
+      </div>
+
+      <div class="connect-group reveal">
+        <h3>Creative &amp; Stock</h3>
+        <div class="pill-row">
+          <a class="pill" href="https://www.behance.net/skemamuddin1" target="_blank" rel="noopener">Behance <span class="arrow">↗</span></a>
+          <a class="pill" href="https://skemamuddin2004.myportfolio.com/" target="_blank" rel="noopener">Portfolio <span class="arrow">↗</span></a>
+          <a class="pill" href="https://www.shutterstock.com/g/skemamuddin" target="_blank" rel="noopener">Shutterstock <span class="arrow">↗</span></a>
+          <a class="pill" href="https://stock.adobe.com/contributor/213291146/SK%20Emam%20Uddin" target="_blank" rel="noopener">Adobe Stock <span class="arrow">↗</span></a>
+        </div>
+      </div>
+
+      <div class="connect-group reveal">
+        <h3>Hire me</h3>
+        <div class="pill-row">
+          <a class="pill" href="https://www.upwork.com/freelancers/~015602af5ac22c9637" target="_blank" rel="noopener">Upwork <span class="arrow">↗</span></a>
+          <a class="pill" href="https://www.freelancer.com.bd/u/SKEmamUddin?sb=t" target="_blank" rel="noopener">Freelancer <span class="arrow">↗</span></a>
+          <a class="pill" href="https://www.fiverr.com/skemamuddin/" target="_blank" rel="noopener">Fiverr <span class="arrow">↗</span></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-strip reveal">
+      <div>
+        <div class="eyebrow" style="margin-bottom:8px;">Direct</div>
+        <a class="big-email" href="mailto:skemamuddin2004@gmail.com">skemamuddin2004@gmail.com</a>
+      </div>
+      <div style="text-align:right;">
+        <a href="tel:+8801817950563">+880 1817 950563</a><br>
+        <span style="color:var(--muted);font-size:14px;">Ranir Bazar, Cumilla, Bangladesh</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-row">
+    <span>© <span id="year"></span> <b>SK Emam Uddin</b>. Built with patience, not a template.</span>
+    <span>Last edited by hand — update this line whenever you change something.</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const toggle = document.getElementById('navToggle');
+  const links = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+
+  /* ---- Staggered scroll reveal ---- */
+  const groups = {};
+  document.querySelectorAll('.reveal').forEach(el => {
+    const parent = el.parentElement;
+    if (!groups[parent]) groups[parent] = [];
+    groups[parent].push(el);
+  });
+  Object.values(groups).forEach(list => {
+    list.forEach((el, i) => { el.style.transitionDelay = (i * 0.12) + 's'; });
+  });
+
+  const revealObserver = new IntersectionObserver((entries, obs) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.01, rootMargin: '0px 0px -60px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  /* fallback: anything already on screen at load reveals immediately without waiting on scroll */
+  window.addEventListener('load', () => {
+    document.querySelectorAll('.reveal').forEach(el => {
+      const r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight && r.bottom > 0) el.classList.add('in');
+    });
+  });
+
+  /* ---- Top scroll progress bar ---- */
+  const bar = document.getElementById('scrollbar');
+  function updateBar(){
+    const h = document.documentElement;
+    const scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+    bar.style.width = scrolled + '%';
+  }
+
+  /* ---- Belt timeline fill ---- */
+  const track = document.getElementById('beltTrack');
+  const progress = document.getElementById('beltProgress');
+  function updateBelt(){
+    const rect = track.getBoundingClientRect();
+    const viewH = window.innerHeight;
+    const total = rect.height;
+    let visible = viewH * 0.75 - rect.top;
+    visible = Math.max(0, Math.min(total, visible));
+    progress.style.height = (visible / total * 100) + '%';
+  }
+
+  /* ---- Hero blob parallax ---- */
+  const blobs = document.querySelectorAll('.blob');
+  function updateParallax(){
+    const y = window.scrollY;
+    blobs.forEach((b, i) => {
+      b.style.transform = `translateY(${y * (0.08 + i * 0.04)}px)`;
+    });
+  }
+
+  function onScroll(){
+    updateBar();
+    updateBelt();
+    updateParallax();
+  }
+  document.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  onScroll();
+</script>
+
+</body>
+</html>
